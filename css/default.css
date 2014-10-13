@@ -1,0 +1,95 @@
+body {
+    color: black;
+    font-size: 16px;
+    margin: 0px;
+    background-color: #ddd;
+}
+
+.co {
+    width: 900px;
+    margin: 0px auto 0px auto;
+    background-color: #fff;
+    padding: 10px 16px;
+}
+
+#header {
+    border-bottom: 2px solid #777;
+    background-color: #ddd;
+}
+#header .co {
+    background-color: #eee;
+}
+
+#content {
+    border-top: solid 2px #ccc;
+    border-bottom: 2px solid #777;
+    background-color: #eee;
+}
+
+
+#footer {
+    border-top: solid 2px #ccc;
+    background-color: #ddd;
+    color: #555;
+    font-size: 12px;
+    text-align: right;
+}
+#footer .co {
+    background-color: #eee;
+}
+
+#logo h1 {
+    color: black;
+    float: left;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#header #navigation {
+    text-align: right;
+}
+
+#header #navigation a {
+    color: black;
+    font-size: 18px;
+    margin-left: 12px;
+}
+
+#content h1, #content h2, #content h3 {
+    padding-left: 16px;
+    margin-left: -16px;
+    margin-right: -16px;
+    border-bottom: 2px solid #fcfcfc;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+.figure {
+    padding-left:   16px;
+    padding-right:  16px;
+    margin-left:   -16px;
+    margin-right:  -16px;
+    border-top:    2px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+    text-align:    center;
+}
+.caption {
+    font-style: italic;
+}
+
+.info {
+    font-style: italic;
+}
+

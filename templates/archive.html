@@ -1,0 +1,10 @@
+
+    $for(posts)$
+        <h3><a href="$url$"> $title$   </a></h3>
+        $if(summary)$
+        <p>                  $summary$ </p>
+        $endif$
+        $if(date)$
+        <div class="info">   $date$    </div>
+        $endif$
+    $endfor$
