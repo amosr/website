@@ -5,7 +5,7 @@ body {
     background-color: #ddd;
 }
 
-.co {
+div.co {
     width: 900px;
     margin: 0px auto 0px auto;
     background-color: #fff;
@@ -16,7 +16,7 @@ body {
     border-bottom: 2px solid #777;
     background-color: #ddd;
 }
-#header .co {
+#header div.co {
     background-color: #eee;
 }
 
@@ -34,7 +34,7 @@ body {
     font-size: 12px;
     text-align: right;
 }
-#footer .co {
+#footer div.co {
     background-color: #eee;
 }
 

@@ -60,7 +60,7 @@ Here, the question is whether `ls'` and `rs'` can be fused together.
 There are multiple ancestors with the same type: `(ls,rs)` and `(ns,ns)`.
 Choosing `(ns,ns)` will actually disallow `ls'` and `rs'` from being fused together, because of the fusion-preventing path between `ns` and `rs'`.
 On the other hand, choosing `(ls,rs)` allows fusion.
-Obviously, `(ls,rs)` is the correct choice.
+In this case, `(ls,rs)` is the correct choice.
 
 Solution
 --------
@@ -75,7 +75,7 @@ parents a b
  ++ [ parents a  b' | b' <- trans b ]
 ```
 
-This can easily be modified to keep track of distance, and return the minimum ancestor:
+This can be modified to keep track of distance, and return the minimum ancestor:
 
 ```haskell
 parents a b
