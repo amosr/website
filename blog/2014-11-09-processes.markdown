@@ -262,6 +262,18 @@ Examples
 ----------
 
 ### Segmented ###
+```haskell
+segs lens base things
+ = do   segd    = mkSegd    lens
+        bases   = reps      segd base
+        offsets = indices   segd
+        ixs     = map2 (+)  bases offsets
+        results = map  (things!) ixs
+        firsts  = map  (things!) base
+        firstsr = reps      segd firsts
+        (results, firstr)
+```
+becomes
 
 ```haskell
 segs    [p : Proc] [k1 kT : Rate]
@@ -293,6 +305,13 @@ segs    [p : Proc] [k1 kT : Rate]
 
 ### Partitioning ###
 ```haskell
+part ins
+ = filter (>5) ins ++ filter (<5) ins
+```
+
+becomes
+
+```haskell
 part [p : Proc] [k : Rate]
      (ins : RateVec k Int)
      (out : Vector    Int)
@@ -321,6 +340,11 @@ part [p : Proc] [k : Rate]
 
 ### Duplicating work ###
 An append can duplicate work.
+```haskell
+dupe ins
+ = do   exp = map expensive ins
+        exp ++ exp
+```
 
 ```haskell
 dupe [p : Proc] [k : Rate]

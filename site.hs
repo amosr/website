@@ -13,7 +13,7 @@ raw dir
 --------------------------------------------------------------------------------
 main :: IO ()
 main = hakyll $ do
-    mapM raw ["images", "papers"]
+    mapM raw ["images", "papers", "talks"]
 
     match "css/*" $ do
         route   idRoute
