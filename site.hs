@@ -47,28 +47,6 @@ main = hakyll $ do
                 >>= relativizeUrls
 
 
-    match "stories/*" $ do
-        toHtml
-        compile $ pandocCompiler
-            >>= loadAndApplyTemplate "templates/post.html"    defaultContext
-            >>= loadAndApplyTemplate "templates/default.html" defaultContext
-            >>= relativizeUrls
-
-    create ["stories.html"] $ do
-        route idRoute
-        compile $ do
-            posts <- loadAll "stories/*"
-            let archiveCtx =
-                    listField "posts" defaultContext (return posts) `mappend`
-                    constField "title" "Short stories"              `mappend`
-                    defaultContext
-
-            makeItem ""
-                >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
-                >>= loadAndApplyTemplate "templates/default.html" archiveCtx
-                >>= relativizeUrls
-
-
 
     match "templates/*" $ compile templateCompiler
 
